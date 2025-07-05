@@ -1,0 +1,21 @@
+{
+  "debug": true,
+  "deviceUid": "2",
+  "processCode": "",
+  "socket_client": {
+    "client_open": true,
+    "client_host": "60.205.108.45",
+    "client_port": 18823,
+    "heart_interval": 3000,
+    "heart_open": false,
+    "heart_send_max_number": 99,
+    "reconnect_max_number": 99999999,
+    "reconnect_delay": 5000
+  },
+  "socket_server": {
+    "server_open": true,
+    "server_port": 7963,
+    "heart_interval": 60000,
+    "max_connections": 10
+  }
+}

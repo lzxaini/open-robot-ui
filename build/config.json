@@ -1,0 +1,15 @@
+{
+  "debug": true,
+  "socket_client": {
+    "client_url": "127.0.0.1",
+    "client_port": "7963",
+    "heart_time": 60000,
+    "reconnect_number": 3,
+    "reconnect_delay": 2000
+  },
+  "socket_server": {
+    "server_port": "7963",
+    "heart_time": 60000,
+    "max_connections": 10
+  }
+}

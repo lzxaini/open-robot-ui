@@ -1,0 +1,53 @@
+appId: com.beasunPlugIn.app
+productName: beasun-plug-in
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+asarUnpack:
+  # - resources/** # 用于指定哪些文件或目录在打包时不会被压缩进asar包，而是会被解压到打包后的应用程序目录中
+win:
+  executableName: beasun-plug-in
+  icon: 'build/win_logo.ico' # Windows 图标
+nsis:
+  oneClick: true  # 是否一键安装 
+  allowElevation: true  # 允许请求提升。若为false，则用户必须使用提升的权限重新启动安装程序。
+  allowToChangeInstallationDirectory: false  # 是否允许修改安装目录
+  createDesktopShortcut: true  # 卸载时图标
+  createStartMenuShortcut: true  #  是否创建开始菜单图标
+  runAfterFinish: true  # 是否安装完成后运行
+  # include: ../build/script/installer.nsh  # 我这里放的是将应用程序默认安装在哪个路径
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName} # 快捷方式名称
+  uninstallDisplayName: ${productName}
+  installerIcon: build/win_logo.ico  # 安装时图标
+  uninstallerIcon: build/win_logo.ico
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+dmg:
+  artifactName: ${name}-${version}.${ext}
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: electronjs.org
+  category: Utility
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+publish:
+  provider: generic
+  url: https://cdn.fxnws.com/beasun/app/plugin/
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/

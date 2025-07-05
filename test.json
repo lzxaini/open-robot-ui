@@ -1,0 +1,10 @@
+[
+
+{"code":"change","data":{"art":{"artId":"1906894731091116033","artLocalUrl":"d:\\sop\\local\\","artName":"SMT04_3052021208_DL2025_1.0.0","artRemark":"","artSaveUrl":"d:\\sop\\save\\","artUrl":"http://60.205.108.45:9000/file/2025/04/01/02596da499764a569079abe05e052e4f.crb","productProcessId":"1906894731091116032"},"itemCode":"DL2025001","itemId":"1887293353008046080","itemName":"DL2025","version":"1.0.0","workOrderCode":"TW20250003","workOrderId":"1887710874152751104"},"rec":"client","resp":"200","time":"1744424103820","uid":"SMT04"},
+
+{"code":"ready","uid":"HLH01","rec":"server","resp":"200","time":"1744424202125","data":{"workOrderCode":"TW20250003","productProcessId":"1906894731091116032","artId":"1906894731091116033"}},
+
+{"code":"status","uid":"SMT04","rec":"server","resp":"200","time":"1744883527867","data":{"workOrderCode":"TW20250003","productProcessId":"1906894731091116032","artId":"1906894731091116033"}}
+
+
+]
