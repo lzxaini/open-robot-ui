@@ -2,7 +2,7 @@
  * @Author: 17630921248 1245634367@qq.com
  * @Date: 2025-04-18 09:20:42
  * @LastEditors: 17630921248 1245634367@qq.com
- * @LastEditTime: 2025-07-05 08:31:28
+ * @LastEditTime: 2025-07-05 09:43:37
  * @FilePath: \open-reobot-ui\src\main\windows\index.js
  * @Description: Fuck Bug
  * 微信：lizx2066
@@ -62,7 +62,7 @@ export function createIndexWindow() {
   indexWindow.webContents.on('before-input-event', (event, input) => {
     if (input) {
       if (input.type === 'keyDown') {
-        if (input.code === 'F12' && configInfo.debug) {
+        if (input.code === 'F12') {
           indexWindow.webContents.openDevTools()
         }
       }
